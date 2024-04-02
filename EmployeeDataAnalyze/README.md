@@ -5,10 +5,3 @@ The project utilizes two main data sources:
 employees table: Contains employee information, including their start date (startdate) and end date (enddate). If an employee is currently active, the enddate field will be NULL.
 dates table: Contains a list of dates (datekey) represented in a specific format (e.g., YYYY-MM-DD).
 
-/* Active on given date */
-select *
-from employees
-where employees.startdate >= '2008-07-01'
-and (employees.enddate <= '2008-07-01'
-    OR
-    employees.enddate is NULL)
